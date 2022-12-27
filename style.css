@@ -7,41 +7,54 @@
 html,
 body {
   height: 100%;
+  background-color: bisque;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 100px 300px 211px 129px;
-  padding: 90px 165px 120px 165px;
-  column-gap: 30px;
-  row-gap: 60px;
+img {
+  display: block;
+  max-width: 100%;
+}
+.card {
+  max-width: 300px;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  background-color: white;
+  overflow: hidden;
+  box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.1);
 }
 
-.grid div:nth-child(1) {
-  grid-column: 1 / -1;
-  background-color: #eee;
+.card__content {
+  padding: 10px;
 }
 
-.grid div:nth-child(2) {
-  background-color: lightcoral;
-  grid-column: 1 / 3;
+.card__btn {
+  padding: 10px 20px;
+  background-color: lightsalmon;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+  display: block;
+  font-size: 18px;
 }
 
-.grid div:nth-child(3) {
-  background-color: black;
-  grid-column: 3 / 4;
-  grid-row: 2 / 4;
+.card__title {
+  color: gray;
 }
 
-.grid div:nth-child(4) {
-  background: lightseagreen;
+.card__text {
+  color: rgba(0, 0, 0, 0.5);
+}
+/* Dark card */
+
+.card--dark {
+  background-color: #3c4144;
 }
 
-.grid div:nth-child(5) {
-  background: lightyellow;
-}
-
-.grid div:nth-last-child(-n + 3) {
-  background: lightsalmon;
+.card__text--dark {
+  color: rgb(173, 167, 167);
 }
