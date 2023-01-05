@@ -1,8 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+/* 100 darajada  */
+#h-id {
+  color: green;
+}
+/*  10 daraja */
+
+/* 10000 important */
+.h-class {
+  color: orange !important;
+}
+
+/* 1 darajada  */
+h1 {
+  color: blue;
+}
+
+/* 0 darajadagi */
 * {
   margin: 0;
   box-sizing: border-box;
   padding: 0;
+  color: red;
 }
 body {
   padding: 6.25rem;
@@ -12,91 +31,4 @@ body {
 img {
   display: block;
   max-width: 100%;
-}
-
-.apps {
-  display: grid;
-  max-width: 1110px;
-  margin: 0 auto;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-}
-
-.apps__card {
-  box-shadow: 0px 15px 30px -11px rgba(131, 166, 210, 0.5);
-  border-radius: 0.5rem;
-  padding: 2rem;
-  overflow: hidden;
-  position: relative;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-}
-
-.apps__card__heading {
-  font-weight: 600;
-  font-size: 1.25rem;
-  line-height: 1.875rem;
-  /* identical to box height */
-  color: #4d4f62;
-}
-
-.apps__card__paragraph {
-  font-weight: 400;
-  font-size: 0.813rem;
-  line-height: 1.438rem;
-  letter-spacing: 0.0902778px;
-  color: #4d4f62;
-  mix-blend-mode: normal;
-  opacity: 0.5;
-}
-
-.apps__card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 4px;
-}
-
-.apps__card__img {
-  justify-self: end;
-}
-
-.apps__card--1::before {
-  background-color: #44d3d2;
-}
-.apps__card--2::before {
-  background-color: #ff637b;
-}
-.apps__card--3::before {
-  background-color: #fcae4a;
-}
-.apps__card--4::before {
-  background-color: #549ef2;
-}
-
-.apps__card--1 {
-  grid-row: 1 / 3;
-
-  align-self: center;
-}
-.apps__card--4 {
-  grid-row: 1 / 3;
-  grid-column: 3 / 4;
-  align-self: center;
-}
-
-/* mobilniy  */
-.apps {
-  grid-template-columns: 1fr;
-}
-
-.apps__card {
-  grid-row: span 1;
-  grid-column: span 1;
-}
-
-html {
-  font-size: 16px;
 }
