@@ -1,27 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
 
-/* 100 darajada  */
-#h-id {
-  color: green;
-}
-/*  10 daraja */
-
-/* 10000 important */
-.h-class {
-  color: orange !important;
-}
-
-/* 1 darajada  */
-h1 {
-  color: blue;
-}
-
-/* 0 darajadagi */
 * {
   margin: 0;
   box-sizing: border-box;
   padding: 0;
-  color: red;
 }
 body {
   padding: 6.25rem;
@@ -31,4 +13,36 @@ body {
 img {
   display: block;
   max-width: 100%;
+}
+input[id="check"] {
+  opacity: 0;
+}
+
+.checkbox {
+  position: relative;
+  display: flex;
+  cursor: pointer;
+}
+
+label {
+  cursor: pointer;
+}
+
+.checkbox__mark {
+  width: 20px;
+  height: 20px;
+  background-color: mediumseagreen;
+  border-radius: 5px;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  left: -10px;
+}
+
+input[id="check"]:checked + label .checkbox__mark {
+  background-image: url("./images/check-line.svg");
+}
+
+input[id="check"]:focus + label .checkbox__mark {
+  box-shadow: 0px 0px 10px mediumaquamarine;
 }
