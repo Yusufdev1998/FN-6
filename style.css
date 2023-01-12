@@ -1,59 +1,64 @@
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-template-rows: auto 1fr auto auto;
+  height: 100%;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #333;
 }
 
-.container {
-  color: #351c75;
-  font-size: 80px;
-  font-weight: bold;
-  animation-name: anim1;
-  animation-duration: 1s;
-  animation-timing-function: ease;
+.grid > div {
+  padding: 15px;
+  text-align: center;
+  background-color: aquamarine;
 }
 
-img {
-  animation-name: anim1;
-  animation-duration: 1s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
+.grid > div:nth-child(1) {
+  grid-column: 1 / -1;
+  background-color: mediumseagreen;
+}
+/* Sidebar */
+.grid > div:nth-child(2) {
+  grid-row: 2 / -1;
+  background-color: lightskyblue;
 }
 
-.animation {
-  width: 100px;
-  height: 50px;
-  animation: anim2 2s, roll 2s ease 2s;
-  animation-direction: alternate;
-  animation-iteration-count: infinite;
-  background-color: orange;
+/* Menu */
+.grid > div:nth-child(3) {
+  grid-column: 2 / -1;
+  background-color: lightblue;
 }
 
-/* .anim3 {
-  animation-name: roll;
-  animation-delay: 7s;
-  animation-duration: 2s;
-} */
+/* Footer */
+.grid > div:nth-child(7) {
+  grid-column: 2 / -1;
+  background-color: darkcyan;
+}
 
-@keyframes anim2 {
-  to {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
+.card {
+  height: 200px;
+}
+/* Responsive */
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, auto);
+  }
+
+  .grid > div:nth-child(2) {
+    display: none;
+  }
+
+  .grid > div:nth-child(3),
+  .grid > div:nth-child(7) {
+    grid-column: 1 / -1;
   }
 }
 
-@keyframes roll {
-  from {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-  }
-  to {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    transform: translate(300px) rotate(1000deg);
+@media (max-width: 576px) {
+  .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
   }
 }
