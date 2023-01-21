@@ -1,17 +1,25 @@
-var money = prompt("Nechpul pulingiz bor");
+"use strict";
 
-function sayohat(pul) {
-  if (pul > 10000) {
-    console.log("Gavaya orollariga");
-  } else if (pul < 1000 && pul > 500) {
-    console.log("Dubayga");
-  } else if (pul <= 500 && pul > 100) {
-    console.log("Toshkent amirsoy");
-  } else if (pul <= 100) {
-    console.log("Uyda qoling!");
-  } else {
-    console.log("5600");
-  }
+// ma'lumotlarni turlarga data types
+
+// I.Primitive / value types
+
+// 1.number 2mld - 2mld
+// 2.string  `"'22432%$assdas' " `
+// 3.undefined undefined
+// 4.null null
+// 5.boolean true / false
+// 6 NaN
+// 6. Symbol
+
+// II. Reference types
+// 1.Object {rang:"qizil", } key:value property:value
+// 2.Array []
+// 3.Function function name()
+
+function a() {
+  var result = 4 + 6;
+  return result;
 }
 
-sayohat(money);
+console.log(a());
